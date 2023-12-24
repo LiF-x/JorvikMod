@@ -18,9 +18,22 @@ package LiFxJorvikConversion
 
 {
     function LiFxJorvikConversion::setup() {
-        LiFx::registerCallback($LiFx::hooks::onServerCreatedCallbacks, Dbchanges, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onServerCreatedCallbacks, Datablock, LiFxJorvikConversion);
         LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, ConChanges, LiFxJorvikConversion);
-        
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, SmallWoodenShed, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenCross, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenBridge, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, StoneBridge, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, MetalCage, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenPier, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenBarricadeA, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, StoneAltar, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenTowerHouse, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenChurch, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenPierT, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenPierL, LiFxJorvikConversion);
+        LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, StoneTombCross, LiFxJorvikConversion); 
+       
         // Register new objects
         LiFx::registerObjectsTypes(LiFxJorvikConversion::ObjectsTypesWoodenCross(), LiFxJorvikConversion);
         LiFx::registerObjectsTypes(LiFxJorvikConversion::ObjectsTypesWoodenBridge(), LiFxJorvikConversion);
@@ -38,7 +51,7 @@ package LiFxJorvikConversion
         LiFx::registerObjectsTypes(LiFxJorvikConversion::ObjectsTypesStoneTombCross(), LiFxJorvikConversion);
     }
     function LiFxJorvikConversion::version() {
-        return "1.0.0";
+        return "1.0.1";
     }
 
     function LiFxJorvikConversion::ObjectsTypesWoodenCross() {
@@ -65,8 +78,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_cross.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_cross.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -97,8 +110,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_bridge.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_bridge.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -129,8 +142,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/stone_bridge.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_bridge.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -161,8 +174,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/small_wooden_shed.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/small_wooden_shed.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = 194200;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -193,8 +206,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/metal_cage.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/metal_cage.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -225,8 +238,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_pier.png";
-            Description = "Object from Jorvik MOD pack  /n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_pier.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -257,8 +270,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_barricade.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_barricade.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = 2400;
             OwnerTimeout = 120;
             AllowExportFromRed = 0;
@@ -289,8 +302,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_barricade.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_barricade.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -321,8 +334,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_barricade.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_barricade.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -334,7 +347,7 @@ package LiFxJorvikConversion
         {
             id = 2409; // has to be globally unique, please reserve ids here: https://www.lifxmod.com/info/object-id-list/
             ObjectName = "Wooden Tower House";
-            ParentID = 72;
+            ParentID = 61;
             IsContainer = 0;
             IsMovableObject = 0;
             IsUnmovableobject = 1;
@@ -353,8 +366,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_house_with_tower.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "mods\JorvikMod\art\2D\objects\wooden_house_with_tower.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -385,8 +398,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/wooden_church.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_church.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -417,8 +430,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/pier_T.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/pier_T.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -449,8 +462,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/pier_T.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/pier_T.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -481,8 +494,8 @@ package LiFxJorvikConversion
             WorkAreaHeight = 0;
             BtnCloseTop = 0;
             BtnCloseLeft = 0;
-            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/objects/stone_tomb_with_cross.png";
-            Description = "Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
+            FaceImage = "yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_tomb_with_cross.png";
+            Description = "Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK";
             BasePrice = NULL;
             OwnerTimeout = NULL;
             AllowExportFromRed = 0;
@@ -493,85 +506,206 @@ package LiFxJorvikConversion
       dbi.Update("INSERT IGNORE `objects_conversions` VALUES (NULL, 2406, 2407)");
       }
 
-  function LiFxJorvikConversion::dbChanges() {
-           ///////////////////////////////////////Recipe /////////////////////////////////////////////
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1088, 'Wooden Cross', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 34, 54, 60, 2400, 25, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_cross.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1089, 'Wooden Bridge', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 18, 60, 2401, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_bridge.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1090, 'Stone Bridge', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 19, 60, 2402, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_bridge.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1091, 'Small Wooden Shed', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 18, 60, 2403, 25, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/small_wooden_shed.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1100, 'Metal Cage', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 19, 60, 2404, 35, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/metal_cage.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1092, 'Wooden Pier', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 18, 60, 2405, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_pier.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1101, 'Wooden Barricade', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 36, 18, 60, 2406, 40, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_barricade.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1094, 'Stone Alter', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 19, 60, 2408, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_altar.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1095, 'Wooden House with Tower', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 36, 18, 60, 2409, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_house_with_tower.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1096, 'Wooden Church', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 19, 60, 2410, 35, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_church.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1097, 'Wooden Pier T', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 18, 60, 2411, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/pier_T.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1098, 'Wooden Pier L', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 18, 60, 2412, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/pier_L.png')");
-      dbi.Update("INSERT IGNORE `recipe` VALUES (1099, 'Stone tomb with cross', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 19, 60, 2413, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_tomb_with_cross.png')");
-
- ///////////////////////////////////////Recipe Requirements /////////////////////////////////////////////
-
+  function LiFxJorvikConversion::SmallWoodenShed() {
+    dbi.Select(LiFxJorvikConversion, "SmallWoodenShedRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Shed', 'Object from Jorvik MOD pack \n CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK.', 32, 18, 60, 2403, 25, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/small_wooden_shed.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::SmallWoodenShedRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
     //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
-    //Wooden Cross
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1088, 233, 0, 65, 2, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1088, 34, 0, 10, 40, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1088, 247, 0, 0, 1, 0)");
-    //Wooden Bridge
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1089, 326, 0, 30, 18, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1089, 233, 0, 20, 4, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1089, 32, 0, 10, 15, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1089, 262, 0, 20, 8, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1089, 281, 0, 20, 40, 0)");
-    //Stone Bridge
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1090, 269, 0, 30, 100, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1090, 233, 0, 20, 8, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1090, 32, 0, 10, 15, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1090, 528, 0, 20, 40, 0)");
-    // Wooden Shed 
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1091, 233, 0, 20, 4, 0)");//no tool
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1091, 326, 0, 20, 40, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1091, 281, 0, 10, 40, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1091, 1356, 0, 20, 10, 0)");    
-    //Metal Cage **
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1100, 282, 0, 20, 4, 0)");//no tool
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1100, 283, 0, 20, 2, 0)"); 
-    //Wooden Pier
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1092, 326, 0, 30, 18, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1092, 233, 0, 20, 8, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1092, 32, 0, 10, 25, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1092, 281, 0, 10, 40, 0)");
-    //Wooden Barricade **
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1101, 233, 0, 20, 3, 0)");//no tool
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1101, 1356, 0, 20, 4, 0)");
-    //Stone Alter
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1094, 269, 0, 30, 80, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1094, 32, 0, 10, 10, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1094, 528, 0, 20, 30, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1094, 270, 0, 20, 4, 0)");
-    //Wooden Tower House
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1095, 233, 0, 30, 200, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1095, 281, 0, 10, 400, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1095, 286, 0, 10, 1, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1095, 326, 0, 5, 230, 0)");
-    //Wooden Church
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1096, 233, 0, 30, 250, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1096, 281, 0, 10, 400, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1096, 286, 0, 10, 2, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1096, 288, 0, 5, 6, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1096, 326, 0, 5, 280, 0)");
-    //Wooden Wooden Pier T
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1097, 326, 0, 30, 36, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1097, 233, 0, 20, 16, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1097, 32, 0, 10, 50, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1097, 281, 0, 10, 80, 0)");
-    //Wooden Wooden Pier L
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1098, 326, 0, 30, 36, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1098, 233, 0, 20, 16, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1098, 32, 0, 10, 50, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1098, 281, 0, 10, 80, 0)");
-    //Stone Tomb with Cross
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1099, 269, 0, 30, 50, 0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, 1099, 528, 0, 20, 20, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 20, 4, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  326, 0, 20, 40, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  281, 0, 10, 40, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1356, 0, 20, 10, 0)");
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+  function LiFxJorvikConversion::WoodenCross() {
+    dbi.Select(LiFxJorvikConversion, "WoodenCrossRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Cross', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 34, 54, 60, 2400, 25, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_cross.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenCrossRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 65, 2, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  34, 0, 10, 40, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  247, 0, 0, 1, 0)");
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::WoodenBridge() {
+    dbi.Select(LiFxJorvikConversion, "WoodenBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Bridge', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 18, 60, 2401, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_bridge.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenBridgeRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  326, 0, 30, 18, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 20, 4, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  32, 0, 10, 15, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  262, 0, 20, 8, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  281, 0, 20, 40, 0)");
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+  function LiFxJorvikConversion::StoneBridge() {
+    dbi.Select(LiFxJorvikConversion, "StoneBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Stone Bridge', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 19, 60, 2402, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_bridge.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::StoneBridgeRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  269, 0, 30, 100, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 20, 8, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  32, 0, 10, 15, 0)");
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  528, 0, 20, 40, 0)");
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::MetalCage() {
+    dbi.Select(LiFxJorvikConversion, "MetalCageRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Metal Cage', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 19, 60, 2404, 35, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/metal_cage.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::MetalCageRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  282, 0, 20, 4, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  283, 0, 20, 2, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::WoodenPier() {
+    dbi.Select(LiFxJorvikConversion, "WoodenPierRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Pier', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 18, 60, 2405, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_pier.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenPierRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  326, 0, 30, 18, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 20, 8, 0)");//done
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  32, 0, 10, 25, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  281, 0, 10, 40, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::WoodenBarricadeA() {
+    dbi.Select(LiFxJorvikConversion, "WoodenBarricadeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Barricade', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 36, 18, 60, 2406, 40, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_barricade.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenBarricadeRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 20, 3, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1356, 0, 20, 4, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+    function LiFxJorvikConversion::StoneAltar() {
+    dbi.Select(LiFxJorvikConversion, "StoneAltarRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Stone Altar', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 19, 60, 2408, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_altar.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::StoneAltarRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  269, 0, 30, 80, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  32, 0, 10, 10, 0)");//done
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  528, 0, 20, 30, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  270, 0, 20, 4, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::WoodenTowerHouse() {
+    dbi.Select(LiFxJorvikConversion, "WoodenTowerHouseRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Tower House', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 36, 18, 60, 2409, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_house_with_tower.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenTowerHouseRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 30, 200, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  281, 0, 10, 400, 0)");//done
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  286, 0, 10, 1, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  326, 0, 5, 230, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::WoodenChurch() {
+    dbi.Select(LiFxJorvikConversion, "WoodenChurchRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Church', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 19, 60, 2410, 35, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/wooden_church.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenChurchRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 30, 250, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  281, 0, 10, 400, 0)");//done
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  286, 0, 10, 2, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  288, 0, 5, 6, 0)");//done
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  326, 0, 5, 280, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::WoodenPierT() {
+    dbi.Select(LiFxJorvikConversion, "WoodenPierTRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Pier T', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 18, 60, 2411, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/pier_T.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenPierTRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  326, 0, 30, 36, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 20, 16, 0)");//done
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  32, 0, 10, 50, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  281, 0, 10, 80, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  }
+
+    function LiFxJorvikConversion::WoodenPierL() {
+    dbi.Select(LiFxJorvikConversion, "WoodenPierLRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Pier L', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 18, 60, 2412, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/pier_L.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::WoodenPierLRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  326, 0, 30, 36, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  233, 0, 20, 16, 0)");//done
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  32, 0, 10, 50, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  281, 0, 10, 80, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
+  } 
+
+    function LiFxJorvikConversion::StoneTombCross() {
+    dbi.Select(LiFxJorvikConversion, "StoneTombCrossRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Stone tomb with cross', 'Object from Jorvik MOD pack CONVERTED TO LIFX AND YO LAUNCHER FRAMEWORK', 32, 19, 60, 2413, 10, 1, 0, 0, 'yolauncher/modpack/mods/Jorvik/art/2D/recipes/stone_tomb_with_cross.png') RETURNING ID");
+  }
+  function LiFxJorvikConversion::StoneTombCrossRequirements(%this, %resultSet) {
+    if(%resultSet.ok() && %resultSet.nextRecord()) {
+      %lastInsert = %resultSet.getFieldValue("ID");
+    //dbi.update("INSERT IGNORE INTO `recipe_requirement` VALUES (RecipeID,            MaterialObjectTypeID, Quality, Influence, Quantity, IsRegionalItemRequired)
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  269, 0, 30, 50, 0)");//no tool
+      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  528, 0, 20, 20, 0)");//done
+    }
+    dbi.remove(%resultSet);
+    %resultSet.delete();
   
   }
 };
