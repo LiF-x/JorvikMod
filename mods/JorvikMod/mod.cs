@@ -56,7 +56,7 @@ package LiFxJorvikConversion
 
     }
     function LiFxJorvikConversion::version() {
-        return "1.2.1";
+        return "1.0.2";
     }
 
     function LiFxJorvikConversion::ObjectsTypesWoodenCross() {
