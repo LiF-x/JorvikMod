@@ -35,7 +35,7 @@
     "dataPatches": [
       {
         "target": "data/cm_objects.xml",
-        "transform": "transforms/cm_objects.xdt.xml"
+        "replace": "data/cm_objects.xml"
       },
       {
         "target": "data/skill_types.xml",
