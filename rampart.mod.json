@@ -3,7 +3,7 @@
   "id": "JorvikMod",
   "name": "JorvikMod",
   "version": "1.0.1",
-  "description": "JorvikMod recipes, objects, and skills (compat\u0027d for LiFx Framework). Creator: Odin one Eye; modified by Ibun.",
+  "description": "JorvikMod recipes, objects, and skills (compat'd for LiFx Framework). Creator: Odin one Eye; modified by Ibun.",
   "authors": [
     "Odin one Eye",
     "Ibun"
@@ -63,7 +63,8 @@
       },
       {
         "target": "data/skill_types.xml",
-        "transform": "transforms/skill_types.xdt.xml"
+        "transform": "transforms/skill_types.xdt.xml",
+        "mergeOps": "transforms/skill_types.merge.json"
       }
     ]
   }
