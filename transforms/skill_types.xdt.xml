@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns="https://lifeisfeudal.com/schemas/skill_types.xsd">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='61')">
+    <abilities>
+      <ability xdt:Locator="Condition(@id='97')">
+        <entities>
+          <entity xdt:Locator="Condition(@type='cell')">
+            <ent_reqs>
+              <ent_req type="complex_object_type" xdt:Transform="Insert">movable</ent_req>
+              <ent_req type="state" xdt:Transform="Insert">complete damaged</ent_req>
+              <ent_req type="not_object_type_id" xdt:Transform="Insert">523 81 1945 1944</ent_req>
+              <ent_req xdt:Locator="Condition(@type='claim')">
+                <land type="town" jh_allowed_worlds="red" xdt:Transform="Insert" />
+              </ent_req>
+            </ent_reqs>
+          </entity>
+        </entities>
+      </ability>
+    </abilities>
+  </row>
+</table>
